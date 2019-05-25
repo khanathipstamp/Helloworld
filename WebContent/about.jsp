@@ -7,7 +7,6 @@
 <title>about</title>
 </head>
 <body>
-
 	<h1>About</h1>
 	<hr />
 	<p>This is a paragraph.</p>
