@@ -1,12 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript"
+	src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+<meta charset="UTF-8">
 <title>about</title>
 </head>
 <body>
+<div align="center">
+	<jsp:include page="include/header.jsp"></jsp:include>
+
+</div>
 	<h1>About</h1>
 	<hr />
 	<p>This is a paragraph.</p>

@@ -8,6 +8,7 @@
 <script type="text/javascript"
 	src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
 <style>
+
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -26,6 +27,10 @@ tr:nth-child(even) {
 <title>Profile</title>
 </head>
 <body background="images/p.jpg">
+<div align="center">
+	<jsp:include page="include/header.jsp"></jsp:include>
+
+</div>
 	<div align="center" >
 		<h1 style="background-color: DodgerBlue;">ProFile</h1>
 
