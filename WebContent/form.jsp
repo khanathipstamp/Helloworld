@@ -92,34 +92,66 @@
 			</form>
 
 			<script>
-				// Disable form submissions if there are invalid fields
-				(function() {
-					'use strict';
-					window.addEventListener('load', function() {
-						// Get the forms we want to add validation styles to
-						var forms = document
-								.getElementsByClassName('needs-validation');
-						// Loop over them and prevent submission
-						var validation = Array.prototype.filter.call(forms,
-								function(form) {
-									form.addEventListener('submit', function(
-											event) {
-										if (form.checkValidity() === false) {
-											event.preventDefault();
-											event.stopPropagation();
-										}
-										form.classList.add('was-validated');
-									}, false);
-								});
-					}, false);
-				})();
+				var data = [ [ "cs", "ma", "ia", "it", "gis" ],
+						[ "st", "mt", "py", "ph", "eg" ], [ "bs", "eb" ],
+						[ "lw", "el" ] ];
+
+				function major() {
+
+					var slfac = document.getElementById("slfac");
+					console.log(data[slfac.value]);
+					var slmajor = document.getElementById("slmajor");
+					slmajor.innerHTML = "";
+
+					for (var i = 0; i < data[slfac.value].length; i++) {
+						var optmajor = document.createElement("option");
+						optmajor.innerHTML = data[slfac.value][i];
+						slmajor.appendChild(optmajor);
+						console.log(data[slfac.value] + i);
+					}
+				}
+				///////////////////////////////////////////////////////////////////////////////////////
+				
 			</script>
 		</div>
 	</div>
+	<hr>
 
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-4">
+			<p>Faculty:</p>
+			<form action="/action_page.php">
+				<select id="slfac" name="cars" class="custom-select mb-3"
+					onchange="major()">
+					<option value="0">วิทยาการสารสนเทศ</option>
+					<option value="1">วิทยาศาสต์</option>
+					<option value="2">นิติศาสตร์</option>
+					<option value="3">บัญชี</option>
+				</select>
 
+			</form>
+		</div>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-2">
+			
 
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-4">
+			<p>Major:</p>
+			
+				<select id="slmajor" name="cars" class="custom-select mb-3">
 
+			</select>
 
+			
+		</div>
+		<div class="col-sm-2"></div>
+		
+	</div>
 </body>
 </html>
